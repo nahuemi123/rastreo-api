@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rastreo-api
+    env: java
+    plan: free
+    buildCommand: "./mvnw -Dmaven.test.skip=true package"
+    startCommand: "java -jar target/rastreo-api-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
